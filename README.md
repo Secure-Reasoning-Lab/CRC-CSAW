@@ -29,9 +29,9 @@ The inaugural event focuses on C and C++ targets evaluated with AddressSanitizer
 
 ## Event links
 
-- Registration: coming soon
-- Discord: coming soon
-- CSAW: https://www.csaw.io/
+- [Registration](https://docs.google.com/forms/d/e/1FAIpQLScyYxAInuka-A1ehkU9fKZ57NKgpFvhjLEDLJNV4oaBQEQFZg/viewform?usp=preview)
+- [Discord](https://discord.gg/QaDhQs7CN)
+- [CSAW](https://www.csaw.io/)
 
 ## Repository guide
 
