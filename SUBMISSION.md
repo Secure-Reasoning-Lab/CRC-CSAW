@@ -12,7 +12,7 @@ Submit the smallest reproducible input that triggers the intended vulnerability 
 
 ## Patch
 
-Submit a unified diff against the vulnerable source revision. A patch is valid only when it:
+Submit at most one unified diff per challenge against the vulnerable source revision. A patch is valid only when it:
 
 1. applies and compiles;
 2. passes the project's functional tests; and
@@ -24,4 +24,6 @@ Patches that change excluded build, test, harness, ground-truth, or documentatio
 
 Retain complete run logs, model and tool identifiers, configuration, and resource-use records. The challenge statement will identify which supporting records must accompany the submission.
 
-Submission transport, naming rules, size limits, and deadlines will be published with each challenge.
+## Qualification submission
+
+For qualification, upload the cleaned result artifacts to Google Drive and complete the qualification submission form before the 48-hour round ends. The Google Form link will be released with the qualification challenges.

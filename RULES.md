@@ -24,6 +24,20 @@ Competition targets and infrastructure may be used only for CRC@CSAW participati
 - Patches may modify only files permitted by the challenge statement.
 - Organizer verification is authoritative.
 
+## Qualification round
+
+Qualification challenges will be released at a time to be announced on September 22, 2026. The qualification round lasts 48 hours.
+
+At least 24 hours before the challenge release, each team must add the organizer GitHub account, to be announced, as a collaborator on the team's private repository created from or forked from CRC-Template. The repository must contain a branch named `qualification` with the CRS version the team will use for qualification. Teams may continue working on other branches, including `main`, but must not modify the `qualification` branch after the qualification CRS lock deadline. Commits made to that branch after the deadline will be ignored.
+
+Organizers will inspect and reproduce top-scoring qualification submissions using the corresponding `qualification` branch. The audit will check whether:
+
+1. the CRS prompts or code inject hints about a challenge solution;
+2. the CRS is instructed or configured to search the web for a challenge solution; or
+3. the submitted trajectory or reported results have been modified.
+
+Organizers will run the CRS from the `qualification` branch up to three times. A team will be disqualified if the organizers cannot reproduce a result similar to the submitted result within those three runs or if the audit identifies any of the prohibited behavior above.
+
 ## Conduct
 
 All participants must follow the [CSAW Code of Conduct](https://www.csaw.io/code-of-conduct).
