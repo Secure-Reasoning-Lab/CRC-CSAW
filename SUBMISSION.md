@@ -12,11 +12,11 @@ Submit the smallest reproducible input that triggers the intended vulnerability 
 
 ## Patch
 
-Submit at most one unified diff per challenge against the vulnerable source revision. A patch is valid only when it:
+For each discovered CPV, CRSBench starts a separate patch-generation trial using the valid submitted PoV or PoV variants associated with that CPV. Submit at most one final unified diff from each patch-generation trial against the vulnerable source revision. A patch is valid only when it:
 
 1. applies and compiles;
 2. passes the project's functional tests; and
-3. neutralizes every accepted proof variant for the vulnerability.
+3. neutralizes every accepted proof variant for the target CPV.
 
 Patches that change excluded build, test, harness, ground-truth, or documentation files are not accepted.
 
