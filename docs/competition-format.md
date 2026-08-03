@@ -36,18 +36,35 @@ Full-scan challenges carry a difficulty premium over delta-scan challenges. Per-
 
 ## Qualification scoring
 
-For each challenge, the score is:
+For each challenge $c$, the score is:
 
-`challenge score = challenge weight × accuracy multiplier × (2 × discovered CPVs + 6 × patched CPVs)`
+```math
+S_c = w_c \cdot AM_c \cdot (2F_c + 6P_c)
+```
 
-The challenge weight is 1 for a delta-scan challenge and 1.25 for a full-scan challenge. A CPV is counted as discovered when the team submits a valid proof for it. A CPV is counted as patched when the team's single submitted patch fully remediates it and passes patch verification. One patch may remediate multiple CPVs.
+Here, $w_c$ is the challenge weight: 1 for a delta-scan challenge and 1.25 for a full-scan challenge. $F_c$ is the number of distinct CPVs discovered through valid submitted PoVs. $P_c$ is the number of distinct CPVs fully remediated by the team's single submitted patch. One patch may remediate multiple CPVs.
 
-For each challenge, let `A` be the number of accurate submissions and `I` the number of inaccurate submissions. The accuracy ratio and multiplier are:
+### PoV accuracy multiplier
 
-`r = A / (A + I)`
+The accuracy multiplier is calculated only from finder-stage PoVs submitted by the CRS. The submitted patch is not included in the accurate or inaccurate submission counts.
 
-`accuracy multiplier = 1 - (1 - r)^4`
+A submitted PoV is a distinct PoV artifact that the CRS writes to the official PoV submission output and includes in its cleaned qualification results. A candidate that the CRS tests internally but does not place in the submission output is not a submitted PoV and does not affect accuracy.
 
-A non-duplicate proof that reproduces and matches a CPV is accurate. A proof that does not reproduce is inaccurate. A reproducible duplicate proof does not change either count. The submitted patch is accurate if it applies, builds, passes the functional tests, and remediates at least one CPV. It is inaccurate if it fails to apply or build, or does not remediate any CPV. A patch that applies, builds, and remediates a CPV but fails the functional tests does not change either count. If `A + I` is zero, the accuracy multiplier is 1.
+For each challenge $c$:
+
+- $A_c$ is the number of non-duplicate submitted PoVs that reproduce and match a ground-truth CPV.
+- $I_c$ is the number of submitted PoVs that fail verification. This includes a PoV that does not reproduce a crash, still crashes on the fully patched build, does not match a ground-truth CPV, times out, or cannot be verified because the submitted artifact is malformed.
+- A reproducible duplicate PoV that matches a CPV already discovered by the team does not increase either count and does not earn additional discovery points.
+- An organizer-side verification failure that is not caused by the submitted artifact will be retried and does not increase $I_c$.
+
+```math
+r_c = \frac{A_c}{A_c + I_c}
+```
+
+```math
+AM_c = 1 - (1-r_c)^4
+```
+
+If $A_c + I_c = 0$, then $AM_c = 1$. Each inaccurate submitted PoV increases $I_c$, so submitting many unverified candidates can reduce the entire score for that challenge. For example, if a team submits one accurate PoV and two inaccurate PoVs, then $A_c = 1$, $I_c = 2$, and $r_c = 1/3$. A fourth PoV that is a reproducible duplicate of the accurate PoV would not change either count.
 
 The qualification score is the sum of the challenge scores.
