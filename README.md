@@ -6,6 +6,11 @@ The inaugural Cyber Reasoning Challenge at CSAW is a student competition on auto
 
 Teams build a cyber reasoning system that analyzes a vulnerable open-source target, produces a valid proof of vulnerability, and submits a source patch. A successful patch must compile, pass the target's functional tests, and neutralize the discovered vulnerability.
 
+## Participant repositories
+
+- [CRC-Template](https://github.com/Secure-Reasoning-Lab/CRC-Template): starter repository for building and locally testing a Finder/Patcher CRS, with Claude Code and Codex examples.
+- [CRC-Evaluate](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate): evaluation harness for validating submissions, running Finder/Patcher benchmarks, and verifying results.
+
 ## Competition format
 
 CRC@CSAW follows a find-then-patch format:

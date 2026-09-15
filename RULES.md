@@ -28,7 +28,7 @@ Competition targets and infrastructure may be used only for CRC@CSAW participati
 
 Qualification challenges will be released at a time to be announced on September 22, 2026. The qualification round lasts 48 hours.
 
-At least 24 hours before the challenge release, each team must add the organizer GitHub account, to be announced, as a collaborator on the team's private repository created from or forked from CRC-Template. The repository must contain a branch named `qualification` with the CRS version the team will use for qualification. Teams may continue working on other branches, including `main`, but must not modify the `qualification` branch after the qualification CRS lock deadline. Commits made to that branch after the deadline will be ignored.
+At least 24 hours before the challenge release, each team must add the organizer GitHub account, to be announced, as a collaborator on the team's private repository created from or forked from [CRC-Template](https://github.com/Secure-Reasoning-Lab/CRC-Template). The repository must contain a branch named `qualification` with the CRS version the team will use for qualification. Teams may continue working on other branches, including `main`, but must not modify the `qualification` branch after the qualification CRS lock deadline. Commits made to that branch after the deadline will be ignored.
 
 Organizers will inspect and reproduce top-scoring qualification submissions using the corresponding `qualification` branch. The audit will check whether:
 
