@@ -20,4 +20,8 @@ Teams may extend, replace, or combine these components while following the compe
 
 Do not commit API keys, tokens, model credentials, or private competition artifacts to a repository.
 
+## Models and API credits
+
+Select models from the [supported qualification models](../SUPPORTED_MODELS.md). Teams may use their own API providers or request credits for CRS development and qualification runs by emailing Andrew Chin at [achin34@gatech.edu](mailto:achin34@gatech.edu) with their team name.
+
 Practice targets and an end-to-end validation guide will be published before qualification.
