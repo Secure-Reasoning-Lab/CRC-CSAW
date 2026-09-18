@@ -4,6 +4,10 @@ Qualification submissions must use the models listed below so organizers can rep
 
 This list applies to qualification. After qualification, organizers may update the supported models for the finals.
 
+> **Important.** Trusted access / cyber verification is not enabled for OpenAI, Anthropic, and Google models through the organizer-provided API. Please limit their use for cybersecurity tasks, as provider safeguards may restrict sensitive requests.
+>
+> We recommend using these models for code analysis, script generation, orchestration, or other general reasoning tasks.
+
 ## Qualification model list
 
 | Model | Model ID |
