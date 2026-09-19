@@ -4,9 +4,9 @@
 | --- | --- |
 | Team registration opens | To be announced |
 | Practice materials released | To be announced |
-| Team registration deadline | September 20, 2026 |
-| Qualification CRS lock | September 21, 2026 |
-| Qualification round | September 22–23, 2026; 48 hours |
+| Team registration deadline | October 1, 2026 |
+| Qualification CRS lock | October 2, 2026 |
+| Qualification round | October 3–4, 2026; 48 hours |
 | Finalist notification | To be announced |
 | CRC@CSAW finals | November 12–13, 2026 |
 

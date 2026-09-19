@@ -12,6 +12,8 @@ Scored vulnerability discovery and patch generation must be performed by the tea
 
 Teams may use fuzzers, static or dynamic analysis, language models, agent systems, and other legally obtained tools. Teams are responsible for complying with the licenses and terms that apply to their tools and models.
 
+Qualification submissions should use models from the [supported-model list](SUPPORTED_MODELS.md) so organizers can reproduce and evaluate the submitted CRS. Teams may use their own API providers for these models.
+
 ## Challenge scope
 
 Competition targets and infrastructure may be used only for CRC@CSAW participation, research, and education. Do not attack competition infrastructure, other teams, external services, or systems outside the released challenge environment.
@@ -26,7 +28,7 @@ Competition targets and infrastructure may be used only for CRC@CSAW participati
 
 ## Qualification round
 
-Qualification challenges will be released at a time to be announced on September 22, 2026. The qualification round lasts 48 hours.
+Qualification challenges will be released at a time to be announced on October 3, 2026. The qualification round lasts 48 hours.
 
 At least 24 hours before the challenge release, each team must add the organizer GitHub account, to be announced, as a collaborator on the team's private repository created from or forked from [CRC-Template](https://github.com/Secure-Reasoning-Lab/CRC-Template). The repository must contain a branch named `qualification` with the CRS version the team will use for qualification. Teams may continue working on other branches, including `main`, but must not modify the `qualification` branch after the qualification CRS lock deadline. Commits made to that branch after the deadline will be ignored.
 
