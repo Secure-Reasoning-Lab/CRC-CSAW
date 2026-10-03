@@ -1,0 +1,11 @@
+# CRC@CSAW 2026 qualification set: 8 benchmarks (4 delta, 4 full).
+# Columns: benchmark mode harnesses_csv [sanitizers_csv]
+# Keep the designated harnesses and sanitizer override unchanged.
+afc-curl-delta-05	delta	curl_fuzzer_dict,curl_fuzzer_ftp
+afc-libexif-delta-02	delta	exif_from_data_fuzzer
+afc-freerdp-full-01	full	TestFuzzCoreServer
+afc-sqlite3-full-01	full	customfuzz3
+atlanta-file-delta-01	delta	magic_fuzzer_fd,magic_fuzzer_loaddb
+atlanta-pcre2-full-01	full	pcre2_fuzzer	undefined
+afc-lcms-full-01	full	cms_postscript_fuzzer,cms_virtual_profile_fuzzer
+atlanta-libssh2-delta-01	delta	ssh2_client_fuzzer

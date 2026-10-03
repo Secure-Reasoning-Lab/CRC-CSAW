@@ -1,5 +1,8 @@
 # Challenges
 
-Challenge statements and public target packages will be added here when each round opens.
+## Qualification 2026
 
-Each challenge directory will contain the objective, scan mode, target revision, designated harness, allowed files, resource limits, scoring rubric, submission instructions, and deadline.
+- [Run instructions and submission](qualification-2026/README.md)
+- [Qualification set](qualification-2026/qualification_set.tsv)
+
+Additional challenge statements and public target packages will be added here when later rounds open.
