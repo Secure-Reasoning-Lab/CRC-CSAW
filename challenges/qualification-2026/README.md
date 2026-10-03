@@ -4,18 +4,25 @@
 
 ## Run
 
-Complete the [CRC-Evaluate setup](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate#readme), including dataset access, model configuration, and registration of your qualification CRS. The commands below reuse its default `.run/sanity` profile and `team-01` registration.
+Complete the [CRC-Evaluate setup](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate#readme), including dataset access and model configuration. Use `.run/team-XX` as your qualification run folder, replacing `XX` with your team identifier. The example below keeps `team-01` as the CRS registration ID.
 
-From the CRC-Evaluate repository root, run:
+Place your LiteLLM configuration at `.run/team-XX/litellm-config.yaml`. From the CRC-Evaluate repository root, register your qualification CRS and run the queue, replacing `/path/to/your/CRC-Template` with your submission checkout:
 
 ```bash
-curl -fL https://raw.githubusercontent.com/Secure-Reasoning-Lab/CRC-CSAW/main/challenges/qualification-2026/qualification_set.tsv \
-  -o .run/sanity/qualification_set.tsv
+mkdir -p .run/team-XX
 
-./scripts/run-queue/run-queue.sh --queue .run/sanity/qualification_set.tsv
+uv run crsbench submission register /path/to/your/CRC-Template \
+  --team-id team-01 --registry-dir .run/team-XX/registry
+
+curl -fL https://raw.githubusercontent.com/Secure-Reasoning-Lab/CRC-CSAW/main/challenges/qualification-2026/qualification_set.tsv \
+  -o .run/team-XX/qualification_set.tsv
+
+./scripts/run-queue/run-queue.sh \
+  --run-root .run/team-XX --team team-01 \
+  --queue .run/team-XX/qualification_set.tsv
 ```
 
-The queue runner generates Finder/Patcher configurations, downloads and initializes missing benchmarks, and runs Finder then Patcher for each row. Results are saved under `.run/sanity/team-01/results/`. Run it in tmux for a long session.
+The queue runner generates Finder/Patcher configurations, downloads and initializes missing benchmarks, and runs Finder then Patcher for each row. Results are saved under `.run/team-XX/team-01/results/`. Run it in tmux for a long session.
 
 For an existing custom setup, pass `--run-root YOUR_RUN_ROOT --team YOUR_TEAM_ID` to the runner. See the [run-queue documentation](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate/blob/main/scripts/run-queue/README.md) for configuration, status, and resume options.
 
