@@ -4,7 +4,7 @@
 
 ## Run
 
-Complete the [CRC-Evaluate setup](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate#readme), including dataset access and model configuration. Use `.run/team-XX` as your qualification run folder, replacing `XX` with your team identifier. The example below keeps `team-01` as the CRS registration ID.
+Complete the [CRC-Evaluate setup](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate#readme). Create the `.run/team-XX` as your qualification run folder. The example below uses `team-01`, and you can use your actual team name.
 
 Place your LiteLLM configuration at `.run/team-XX/litellm-config.yaml`. From the CRC-Evaluate repository root, register your qualification CRS and run the queue, replacing `/path/to/your/CRC-Template` with your submission checkout:
 
@@ -22,9 +22,7 @@ curl -fL https://raw.githubusercontent.com/Secure-Reasoning-Lab/CRC-CSAW/main/ch
   --queue .run/team-XX/qualification_set.tsv
 ```
 
-The queue runner generates Finder/Patcher configurations, downloads and initializes missing benchmarks, and runs Finder then Patcher for each row. Results are saved under `.run/team-XX/team-01/results/`. Run it in tmux for a long session.
-
-For an existing custom setup, pass `--run-root YOUR_RUN_ROOT --team YOUR_TEAM_ID` to the runner. See the [run-queue documentation](https://github.com/Secure-Reasoning-Lab/CRC-Evaluate/blob/main/scripts/run-queue/README.md) for configuration, status, and resume options.
+The queue runner generates Finder/Patcher configurations, downloads and initializes missing benchmarks, and runs Finder then Patcher for each row. Results are saved under `.run/team-XX/team-01/results/`. 
 
 ## Submit
 
